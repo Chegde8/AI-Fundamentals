@@ -44,3 +44,12 @@ be corrected or removed. Some methods of treating outliers are:
 Winsorization: cap data at certain percentiles (1st and 99th). Common in retail forecasting.  
 Replace with imputed normal values: replace unexpected spike with rolling mean, replace stockout zeros with expected demand.  
 Use robust models: median-based losses, quantile models, gradient boosting (robust to outliers), Prophet (has builtin outlier robustness).
+
+7. How do you validate models for time series? Why can't you shuffle?
+Ans: You can't shuffle time series data because future values must never leak into the past. To make validation and test sets from the dataset, time-aware train, validation and test splits can be created where each set contains different time periods of data. For example, train set has data from 2022-2024. Validation and test sets have data from 2025 Q1-Q2 and 2025 Q3-Q4 respectively.
+Rolling/sliding window cross validation: also called walk forward validation, time-series cross-validation and rolling horizon evaluation. This looks like expanding windows, for example train on 2018-2020 test on 2021, then train on 2018-2021 test on 2022, then train on 2018-2022 test on 2023. Or fixed size windows that slide can also be used, eg: train on 2018-2020 test on 2021, then train on 2019-2021 test on 2022. Each fold simulates forecasting from a different point in time. Models are evaluated on multiple future periods. It reduces variance in evaluation. This is considered gold standard for robust forecasting validation.  
+Choose the right error metrics: MAE (robust and interpretable), RMSE (penalizes large errors), MAPE (works when no zeros), WAPE/sMAPE (retail favorite), MASE (compares against naive forecast). For businesses, metrics like forecast bias, service level, inventory cost impact can be used.  
+Validate for different forecast horizons: don't just check next step, but check multiple steps, eg: 1 day ahead, 7 days ahead, 30 days ahead.  
+Check stability across segments: if forecasting many products/regions, evaluate each SKU, category, store. This helps identify seasonality heavy series, intermittent demand, unstable segments.  
+Back test on past known periods and compare with actual data.  
+Evaluate against baseline models.
