@@ -20,3 +20,6 @@ The shape of input data is (batch_size, sequence_length, num_features)
 ## Limitations
 1. Short-term dependencies: may miss longer term dependencies without additional layers like RNNs.
 2. Data format: requires data to be preprocessed into suitable shape.
+
+### References:
+1. [Understanding the 1D Convolutional Layer in Deep Learning](https://medium.com/@abhishekjainindore24/understanding-the-1d-convolutional-layer-in-deep-learning-7a4cb994c981)
