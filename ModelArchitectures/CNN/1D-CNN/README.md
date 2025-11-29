@@ -4,6 +4,8 @@ The kernel slides along a single spatial dimension.
 
 The shape of input data is (batch_size, sequence_length, num_features)
 
+![1D CNN](https://github.com/Chegde8/AI-Fundamentals/blob/main/ModelArchitectures/CNN/images/1DCNN_architecture.png?raw=true "Title")
+
 ## How it works
 1. A kernel (filter) which is a small matrix of learnable weights is used to extract features from the sequence.
 2. The kernel slides over the input sequence, performing a dot product at each position.
