@@ -1,0 +1,46 @@
+# Random time series questions and answers for deeper understanding
+
+1. What is demand forecasting?  
+Ans: Demand forecasting is the process of predicting future customer demand for a product or service using historical data, patterns, and external factors. 
+It helps to ensure inventory is neither too high or low, plan production schedules, support staffing and logistics decisions, guide pricing and promotion strategies, etc.
+Demand forecasting usually involves historical time series patterns (trend, seasonality, cycles, noise), external factors (holidays, weather, competitor actions, macroeconomic indicators, etc.),
+and models (classical or statistical like ARIMA, SARIMA, exponential smoothing, etc; machine learning like random forest, XGBoost with lag features; deep learning like LSTM, GRU, temporal CNNs,
+transformers).
+
+2. How would you model demand forecasting?  
+Ans: There are typically 4 stages in demand forecasting.  
+First, understand the data and business problem: what is the granularity (daily, weekly, monthly); how long is the history; does the data have trend, seasonality, price changes, holidays, etc;
+are there multiple products (hierarchical forecasting) or just one. This determines whether to use simple or more complex models.  
+Second, feature engineering: time-based features (lag features, rolling statistics like moving average and rolling standard deviation, seasonality indicators, day of week/month/quarter/holiday flag)
+external features (price, promotion, weather, etc), stockout corrections.  
+Third, choose forecasting modeling approach: there are three major categories based on data patterns, scale and desired accuracy. Classical statistical models are great when there is long history,
+strong seasonality and demand is stable. These are interpretable and provide strong baselines. Machine learning models are useful when external variables matter, demand is irregular, or datasets
+are large and complex. These models require feature engineering but adapt well to non-linear patterns. Deep learning models are useful when there are many time series, long range dependencies,
+complicated patterns, missing values, irregular demand. These learn seasonality and interactions automatically.  
+Fourth, evaluate and iterate: use metrics like MAE, RMSE, MAPE, WAPE. Split data using rolling window cross-validation (never random split), out-of-time test set.
+Then improve with hyperparameter tuning, feature selection, ensembling. 
+
+3. What are some transformer for time series?  
+Ans: TFT, Informer, N-BEATS, DeepAR  
+
+4. How do you handle missing data in forecasting?
+Ans: Missing data can distort trend and/or seasonality, and break model assumptions. Here are some approaches to handle missing data:  
+Interpolation (most common): linear interpolation (simple), spline interpolation (smooth), time-based interpolation. Used when gap is small and demand is continuous.  
+Forward/backward fill: ffill for short-term gaps, bfill only when justified. Simple but risks bias if demand is volatile.  
+Model based imputation: rolling average, seasonal decomposition + imputation, forecast the missing point using ARIMA/LSTM. Useful when missing segments are longer.
+Leave missing data and let model handle it: certain models like LightGBM, some Prophet components handle missing data natively.
+
+5. How do you handle seasonality in forecasting?  
+Ans: Identify seasonality using ACF/PACF plots, STL decomposition, Fourier analysis, visual inspection. Model seasonality by using the right models: SARIMA, Holt-Winters,
+Prophet if using classical methods, add seasonality features like day of week, month, week of year, holiday flags, fourier terms (for long cycles) if using ML models. Deep learning models
+generally learn seasonality automatically but can benefit from data embeddings, or seasonal encoder variables. Seasonality can also be handled by deseasonalizing, i.e.
+explicitly removing seasonality first. It is useful when demand is highly periodic.  
+
+6. How do you handle outliers in forecasting?  
+Ans: Outliers distort model and inflate error metrics. To detect outliers, use z-score/modified z-score, IQR rule, STL residuals, change-point
+detection, visual inspection (common in real-life). Decide the cause of outliers. Not all outliers are bad. Keep good outliers like holiday spikes, 
+promotions, product launches, etc or model them separately. Bad outliers like logging issues, stockouts appearing as zeros, system bugs should 
+be corrected or removed. Some methods of treating outliers are:  
+Winsorization: cap data at certain percentiles (1st and 99th). Common in retail forecasting.  
+Replace with imputed normal values: replace unexpected spike with rolling mean, replace stockout zeros with expected demand.  
+Use robust models: median-based losses, quantile models, gradient boosting (robust to outliers), Prophet (has builtin outlier robustness).
