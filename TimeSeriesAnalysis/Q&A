@@ -33,4 +33,14 @@ Leave missing data and let model handle it: certain models like LightGBM, some P
 Ans: Identify seasonality using ACF/PACF plots, STL decomposition, Fourier analysis, visual inspection. Model seasonality by using the right models: SARIMA, Holt-Winters,
 Prophet if using classical methods, add seasonality features like day of week, month, week of year, holiday flags, fourier terms (for long cycles) if using ML models. Deep learning models
 generally learn seasonality automatically but can benefit from data embeddings, or seasonal encoder variables. Seasonality can also be handled by deseasonalizing, i.e.
-explicitly removing seasonality first. It is useful when demand is highly periodic. 
+explicitly removing seasonality first. It is useful when demand is highly periodic.  
+
+6. How do you handle outliers in forecasting?  
+Ans: Outliers distort model and inflate error metrics. To detect outliers, use z-score/modified z-score, IQR rule, STL residuals, change-point
+detection, visual inspection (common in real-life). Decide the cause of outliers. Not all outliers are bad. Keep good outliers like holiday spikes, 
+promotions, product launches, etc or model them separately. Bad outliers like logging issues, stockouts appearing as zeros, system bugs should 
+be corrected or removed. Some methods of treating outliers are:  
+Winsorization: cap data at certain percentiles (1st and 99th). Common in retail forecasting.  
+Replace with imputed normal values: replace unexpected spike with rolling mean, replace stockout zeros with expected demand.  
+Use robust models: median-based losses, quantile models, gradient boosting (robust to outliers), Prophet (has builtin outlier robustness).
+
