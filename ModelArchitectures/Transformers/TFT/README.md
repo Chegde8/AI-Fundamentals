@@ -40,3 +40,7 @@ Basic transformers are not inherently interpretable.
    * hundreds of locations
    * multiple time series  
 It does feature gating and variable selection for each individual sequence. Basic transformers treat the entire input as one token sequence.
+
+## References
+1. [Understanding temporal fusion transformers](https://medium.com/dataness-ai/understanding-temporal-fusion-transformer-9a7a4fcde74b)
+2. [Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting](https://arxiv.org/abs/1912.09363)
