@@ -1,6 +1,8 @@
 # Temporal Fusion Transformers
 Temporal fusion transformer (TFT) is a model used for multi-horizon and multivariate time series forecasting.  
 
+![Temporal fusion transformer](https://github.com/Chegde8/AI-Fundamentals/blob/main/ModelArchitectures/Transformers/images/tft.png?raw=true "Title")
+
 A basic transformer, like the ones used in NLP, are mainly designed for sequence-to-sequence tasks, processing token embeddings, using multi-head attention for contextual understanding.  
 But time series forecasting has unique needs:
 * known future inputs (eg: holidays, prices)  
