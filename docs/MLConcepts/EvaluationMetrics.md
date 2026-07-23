@@ -8,7 +8,9 @@ Accuracy measures the fraction of correctly predicted positive class samples out
 $$ Accuracy = \frac{TP + TN}{TP + FP + TN + FN}$$
 
 Important considerations:
-- Do not use accuracy for imbalanced datasets. The majority class will dominate the metric.
+\begin{itemize}
+\item Do not use accuracy for imbalanced datasets. The majority class will dominate the metric.
+\end{itemize}
 
 ### 2. Precision
 
