@@ -873,6 +873,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="5. AUC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roc-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROC Curve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1581,6 +1598,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="5. AUC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roc-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROC Curve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1663,6 +1697,19 @@
 <h3 id="3-recall">3. Recall</h3>
 <h3 id="4-f1-score">4. F1 Score</h3>
 <h3 id="5-auc">5. AUC</h3>
+<p>AUC (Area Under Curve) measures the area under the Receiver Operating Characteristics (ROC) curve. </p>
+<h4 id="roc-curve">ROC Curve</h4>
+<p>The ROC curve plots the FPR on x-axis and TPR on y-axis. 
+$$ TPR = \frac{TP}{TP + FN} $$
+$$ FPR = \frac{FP}{FP + TN} $$</p>
+<p>Generally, binary classifications output a probability score which indicates the probability of the sample being positive. To convert these probabilities into a binary score, we often use a threshold. A score above that threshold value is a 1 and anythng below is a 0.
+The ROC curve plots the TPR and FPR for different thresholds. This helps in determining a good threshold value to use, as well as gives an overall idea of how the model performs regardless of what threshold is used thus making it easy to compare different models overall without relying on thesholds (this is what AUC also does). </p>
+<p>The animation below gives a visual description of how the ROC curve is created using a confusion matrix.</p>
+<video width="600" controls>
+  <source src="images/roc.mp4" type="video/mp4">
+</video>
+
+<p>The larger the area under the ROC curve, the better the model</p>
 <h3 id="6-aucpr">6. AUCPR</h3>
 <h2 id="multi-class-classification-metrics">Multi-class classification metrics</h2>
 <h2 id="regression-metrics">Regression metrics</h2>
