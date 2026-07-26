@@ -24,7 +24,7 @@ AUC (Area Under Curve) measures the area under the Receiver Operating Characteri
 #### ROC Curve
 The ROC curve plots the FPR on x-axis and TPR on y-axis. 
 
-$$ TPR = \frac{TP}{TP + FN} \n
+$$ TPR = \frac{TP}{TP + FN} \\
  FPR = \frac{FP}{FP + TN} $$
 
 Generally, binary classifications output a probability score which indicates the probability of the sample being positive. To convert these probabilities into a binary score, we often use a threshold. A score above that threshold value is a 1 and anythng below is a 0.
