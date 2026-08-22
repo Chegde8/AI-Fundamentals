@@ -1312,6 +1312,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Hypothesis Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core mechanics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-p-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The p-value
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1502,6 +1530,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Hypothesis Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core mechanics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-p-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The p-value
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1534,6 +1590,30 @@
 </li>
 </ul>
 <p>You never prove <span class="arithmatex">\(H_0\)</span> or <span class="arithmatex">\(H_1\)</span> as true. Instead, you either reject <span class="arithmatex">\(H_0\)</span> (evidence suggests something is going on) or fail to reject <span class="arithmatex">\(H_0\)</span> (not enough evidence to say something is going on. This is not the same as proving there's no effect.)</p>
+<h3 id="core-mechanics">Core mechanics</h3>
+<ol>
+<li>
+<p><strong>Collect data</strong> from 2 or more groups - E.g., control (old button) vs. treatment (new button)</p>
+</li>
+<li>
+<p><strong>Compute a test statistic</strong> - a number summarizing how different the observed data is from what you would expect under <span class="arithmatex">\(H_0\)</span> (e.g., a t-statistic for comparing means, z-statistic for comparing proportions).</p>
+</li>
+<li>
+<p><strong>Compute a p-value</strong> - given that <span class="arithmatex">\(H_0\)</span> is true, what is the probability of seeing a result at least as extreme as what you observed, just by random chance?</p>
+</li>
+<li>
+<p><strong>Compare p-value to a significance threshold (\alpha)</strong>, typically 0.05 - </p>
+</li>
+<li><span class="arithmatex">\(p-value &lt; \alpha\)</span> : reject <span class="arithmatex">\(H_0\)</span> (statistically significant result)</li>
+<li><span class="arithmatex">\(p-value \geq \alpha\)</span> : fail to reject <span class="arithmatex">\(H_0\)</span> (not enough evidence)</li>
+</ol>
+<h2 id="the-p-value">The p-value</h2>
+<p>The p-value is the probability of observing data at least as extreme as what you got, assuming the null hypothesis is true.</p>
+<p>What it is not:
+- It is NOT the probability of <span class="arithmatex">\(H_0\)</span> being true
+- It is NOT the probability that your result is due to chance
+- It is NOT the probability that <span class="arithmatex">\(H_1\)</span> is true</p>
+<p>A p-value of 0.03 means: if there really were no effect, you'd see a result this extreme (or more extreme) only 3% of the time by random chance. It says nothing directly about how likely it is that there is an effect — that would require Bayesian reasoning with a prior, which frequentist p-values don't provide.</p>
 
 
 
