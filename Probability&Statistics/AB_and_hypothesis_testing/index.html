@@ -1342,6 +1342,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#type-i-and-type-ii-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type I and Type II Errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-an-ab-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing an AB Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Designing an AB Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1560,6 +1599,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#type-i-and-type-ii-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type I and Type II Errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-an-ab-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing an AB Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Designing an AB Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1622,6 +1700,101 @@
 </li>
 </ul>
 <p>A p-value of 0.03 means: if there really were no effect, you'd see a result this extreme (or more extreme) only 3% of the time by random chance. It says nothing directly about how likely it is that there is an effect — that would require Bayesian reasoning with a prior, which frequentist p-values don't provide.</p>
+<h2 id="type-i-and-type-ii-errors">Type I and Type II Errors</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(H_0\)</span> is actually true</th>
+<th><span class="arithmatex">\(H_0\)</span> is actually false</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You reject <span class="arithmatex">\(H_0\)</span></td>
+<td>Type I Error (false positive)</td>
+<td>Correct (true positive)</td>
+</tr>
+<tr>
+<td>You fail to reject <span class="arithmatex">\(H_0\)</span></td>
+<td>Correct (true negative)</td>
+<td>Type II Error (false negative)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Type I error rate = \alpha - probability of concluding there's an effect when there isn't one.</p>
+</li>
+<li>
+<p>Type II error rate = \beta - probability of missing a real effect that's actually there.</p>
+</li>
+<li>
+<p>Statistical power = 1 - \beta - probability of correctly detecting a real effect when it exists. To increase power you can increase sample size, increase effect size (harder to control), or reduce variance in your measurement.</p>
+</li>
+</ul>
+<p>There is a fundamental tradeoff: making \alpha smaller (stricter significance threshold) educes false positives but increases false negatives (lower power), all else equal.</p>
+<h2 id="designing-an-ab-test">Designing an AB Test</h2>
+<ol>
+<li>
+<p>Define the metric- pick a single primary metric that reflects the business goal (e.g., conversion rate), not multiple metrics you'll cherry pick from later.</p>
+</li>
+<li>
+<p>Define <span class="arithmatex">\(H_0\)</span> and <span class="arithmatex">\(H_1\)</span> - usually <span class="arithmatex">\(H_0\)</span> is that there is no difference in metric between control and treatment.</p>
+</li>
+<li>
+<p>Choose significance level \alpha - typically 0.05, sometimes lower for high stakes decisions.</p>
+</li>
+<li>
+<p>Determine required sample size before before running the test - based on:</p>
+</li>
+<li>
+<p>Desired statistical power (commonly 80%) </p>
+</li>
+<li>
+<p>Minimum detectable effect (the smallest change you actually care about detecting)</p>
+</li>
+<li>
+<p>Baseline conversion rate and variance</p>
+</li>
+<li>
+<p>Randomly assign users to control and treatment - randomization is what allows you to attribute differences to the treatment causally, not to confounders.</p>
+</li>
+<li>
+<p>Run the test for the predetermined duration / sample size - don't peek and stop early just because it looks significant. This inflates false positive rate, sometimes called peeking problem.</p>
+</li>
+<li>
+<p>Analyze results - compute the test statistic, p-value, and often a confidence interval for the effect size (not just the significance, the magnitude of the effect matters for business decisions too).</p>
+</li>
+<li>
+<p>Make a decision - reject or fail to reject <span class="arithmatex">\(H_0\)</span>, but also weigh practical significance (is the effect big enough to matter for the business) vs. just statistical significance (is it likely a real, non-zero effect). A tiny but statistically significant effect might ot be worth shipping. </p>
+</li>
+</ol>
+<h3 id="an-example">An example</h3>
+<p>Suppose a retail company wants to test whether adding "only 2 left in stock" urgency messaging increases conversion rate.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(H_0\)</span> - urgency messaging has no effect on conversion rate.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(H_1\)</span> - urgency messaging changes conversion rate. </p>
+</li>
+<li>
+<p>Randomly split traffic 50/50 into control (no messaging) and treatment (messaging shown).</p>
+</li>
+<li>
+<p>Predetermine sample size needed to detect, say, a 1% absolute lift in conversion with 80% power at \alpha = 0.05.</p>
+</li>
+<li>
+<p>Run for full predetermined period.</p>
+</li>
+<li>
+<p>Compute p-value comparing conversion rates between groups.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(p &lt; 0.05\)</span> and the lift is large enough to matter practically (e.g., not just 0.01% higher), ship it.</p>
+</li>
+</ul>
 
 
 
