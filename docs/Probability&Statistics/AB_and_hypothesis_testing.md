@@ -37,3 +37,57 @@ What it is not:
 - It is NOT the probability that $H_1$ is true
 
 A p-value of 0.03 means: if there really were no effect, you'd see a result this extreme (or more extreme) only 3% of the time by random chance. It says nothing directly about how likely it is that there is an effect — that would require Bayesian reasoning with a prior, which frequentist p-values don't provide.
+
+## Type I and Type II Errors
+| | $H_0$ is actually true | $H_0$ is actually false |
+| --- | --- | ---|
+You reject $H_0$ | Type I Error (false positive) | Correct (true positive) |
+| You fail to reject $H_0$ | Correct (true negative) | Type II Error (false negative) |
+
+- Type I error rate = \alpha - probability of concluding there's an effect when there isn't one.
+
+- Type II error rate = \beta - probability of missing a real effect that's actually there.
+
+- Statistical power = 1 - \beta - probability of correctly detecting a real effect when it exists. To increase power you can increase sample size, increase effect size (harder to control), or reduce variance in your measurement.
+
+There is a fundamental tradeoff: making \alpha smaller (stricter significance threshold) educes false positives but increases false negatives (lower power), all else equal.
+
+## Designing an AB Test
+1. Define the metric- pick a single primary metric that reflects the business goal (e.g., conversion rate), not multiple metrics you'll cherry pick from later.
+
+2. Define $H_0$ and $H_1$ - usually $H_0$ is that there is no difference in metric between control and treatment.
+
+3. Choose significance level \alpha - typically 0.05, sometimes lower for high stakes decisions.
+
+4. Determine required sample size before before running the test - based on:
+
+* Desired statistical power (commonly 80%) 
+
+* Minimum detectable effect (the smallest change you actually care about detecting)
+
+* Baseline conversion rate and variance
+
+5. Randomly assign users to control and treatment - randomization is what allows you to attribute differences to the treatment causally, not to confounders.
+
+6. Run the test for the predetermined duration / sample size - don't peek and stop early just because it looks significant. This inflates false positive rate, sometimes called peeking problem.
+
+7. Analyze results - compute the test statistic, p-value, and often a confidence interval for the effect size (not just the significance, the magnitude of the effect matters for business decisions too).
+
+8. Make a decision - reject or fail to reject $H_0$, but also weigh practical significance (is the effect big enough to matter for the business) vs. just statistical significance (is it likely a real, non-zero effect). A tiny but statistically significant effect might ot be worth shipping. 
+
+### An example
+Suppose a retail company wants to test whether adding "only 2 left in stock" urgency messaging increases conversion rate.
+
+- $H_0$ - urgency messaging has no effect on conversion rate.
+
+- $H_1$ - urgency messaging changes conversion rate. 
+
+- Randomly split traffic 50/50 into control (no messaging) and treatment (messaging shown).
+
+- Predetermine sample size needed to detect, say, a 1% absolute lift in conversion with 80% power at \alpha = 0.05.
+
+- Run for full predetermined period.
+
+- Compute p-value comparing conversion rates between groups.
+
+- If $p < 0.05$ and the lift is large enough to matter practically (e.g., not just 0.01% higher), ship it.
