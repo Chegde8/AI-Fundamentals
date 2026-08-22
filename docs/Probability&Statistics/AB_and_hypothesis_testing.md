@@ -44,11 +44,11 @@ A p-value of 0.03 means: if there really were no effect, you'd see a result this
 You reject $H_0$ | Type I Error (false positive) | Correct (true positive) |
 | You fail to reject $H_0$ | Correct (true negative) | Type II Error (false negative) |
 
-- Type I error rate = \alpha - probability of concluding there's an effect when there isn't one.
+- Type I error rate = $\alpha$ - probability of concluding there's an effect when there isn't one.
 
-- Type II error rate = \beta - probability of missing a real effect that's actually there.
+- Type II error rate = $\beta$ - probability of missing a real effect that's actually there.
 
-- Statistical power = 1 - \beta - probability of correctly detecting a real effect when it exists. To increase power you can increase sample size, increase effect size (harder to control), or reduce variance in your measurement.
+- Statistical power = $1 - \beta$ - probability of correctly detecting a real effect when it exists. To increase power you can increase sample size, increase effect size (harder to control), or reduce variance in your measurement.
 
 There is a fundamental tradeoff: making \alpha smaller (stricter significance threshold) educes false positives but increases false negatives (lower power), all else equal.
 
@@ -57,7 +57,7 @@ There is a fundamental tradeoff: making \alpha smaller (stricter significance th
 
 2. Define $H_0$ and $H_1$ - usually $H_0$ is that there is no difference in metric between control and treatment.
 
-3. Choose significance level \alpha - typically 0.05, sometimes lower for high stakes decisions.
+3. Choose significance level $\alpha$ - typically 0.05, sometimes lower for high stakes decisions.
 
 4. Determine required sample size before before running the test - based on:
 
@@ -84,7 +84,7 @@ Suppose a retail company wants to test whether adding "only 2 left in stock" urg
 
 - Randomly split traffic 50/50 into control (no messaging) and treatment (messaging shown).
 
-- Predetermine sample size needed to detect, say, a 1% absolute lift in conversion with 80% power at \alpha = 0.05.
+- Predetermine sample size needed to detect, say, a 1% absolute lift in conversion with 80% power at $\alpha$ = 0.05.
 
 - Run for full predetermined period.
 
