@@ -53,11 +53,11 @@ You reject $H_0$ | Type I Error (false positive) | Correct (true positive) |
 There is a fundamental tradeoff: making \alpha smaller (stricter significance threshold) educes false positives but increases false negatives (lower power), all else equal.
 
 ## Designing an AB Test
-1. Define the metric- pick a single primary metric that reflects the business goal (e.g., conversion rate), not multiple metrics you'll cherry pick from later.
+1. **Define the metric** - pick a single primary metric that reflects the business goal (e.g., conversion rate), not multiple metrics you'll cherry pick from later.
 
-2. Define $H_0$ and $H_1$ - usually $H_0$ is that there is no difference in metric between control and treatment.
+2. **Define $H_0$ and $H_1$** - usually $H_0$ is that there is no difference in metric between control and treatment.
 
-3. Choose significance level $\alpha$ - typically 0.05, sometimes lower for high stakes decisions.
+3. **Choose significance level $\alpha$** - typically 0.05, sometimes lower for high stakes decisions.
 
 4. Determine required sample size before before running the test - based on:
 
@@ -67,13 +67,13 @@ There is a fundamental tradeoff: making \alpha smaller (stricter significance th
 
 * Baseline conversion rate and variance
 
-5. Randomly assign users to control and treatment - randomization is what allows you to attribute differences to the treatment causally, not to confounders.
+5. **Randomly assign users** to control and treatment - randomization is what allows you to attribute differences to the treatment causally, not to confounders.
 
-6. Run the test for the predetermined duration / sample size - don't peek and stop early just because it looks significant. This inflates false positive rate, sometimes called peeking problem.
+6. **Run the test** for the predetermined duration / sample size - don't peek and stop early just because it looks significant. This inflates false positive rate, sometimes called peeking problem.
 
-7. Analyze results - compute the test statistic, p-value, and often a confidence interval for the effect size (not just the significance, the magnitude of the effect matters for business decisions too).
+7. **Analyze results** - compute the test statistic, p-value, and often a confidence interval for the effect size (not just the significance, the magnitude of the effect matters for business decisions too).
 
-8. Make a decision - reject or fail to reject $H_0$, but also weigh practical significance (is the effect big enough to matter for the business) vs. just statistical significance (is it likely a real, non-zero effect). A tiny but statistically significant effect might ot be worth shipping. 
+8. **Make a decision** - reject or fail to reject $H_0$, but also weigh practical significance (is the effect big enough to matter for the business) vs. just statistical significance (is it likely a real, non-zero effect). A tiny but statistically significant effect might ot be worth shipping. 
 
 ### An example
 Suppose a retail company wants to test whether adding "only 2 left in stock" urgency messaging increases conversion rate.
