@@ -59,7 +59,7 @@ There is a fundamental tradeoff: making \alpha smaller (stricter significance th
 
 3. **Choose significance level $\alpha$** - typically 0.05, sometimes lower for high stakes decisions.
 
-4. **Determine required sample size** before before running the test - based on:
+4. **Determine required sample size** before running the test - based on:
 
     - Desired statistical power (commonly 80%) 
 
