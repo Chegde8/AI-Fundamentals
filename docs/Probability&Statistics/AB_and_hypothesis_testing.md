@@ -59,13 +59,13 @@ There is a fundamental tradeoff: making \alpha smaller (stricter significance th
 
 3. **Choose significance level $\alpha$** - typically 0.05, sometimes lower for high stakes decisions.
 
-4. Determine required sample size before before running the test - based on:
+4. **Determine required sample size** before before running the test - based on:
 
-* Desired statistical power (commonly 80%) 
+- Desired statistical power (commonly 80%) 
 
-* Minimum detectable effect (the smallest change you actually care about detecting)
+- Minimum detectable effect (the smallest change you actually care about detecting)
 
-* Baseline conversion rate and variance
+- Baseline conversion rate and variance
 
 5. **Randomly assign users** to control and treatment - randomization is what allows you to attribute differences to the treatment causally, not to confounders.
 
