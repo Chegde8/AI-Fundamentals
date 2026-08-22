@@ -29,8 +29,11 @@ You never prove $H_0$ or $H_1$ as true. Instead, you either reject $H_0$ (eviden
 The p-value is the probability of observing data at least as extreme as what you got, assuming the null hypothesis is true.
 
 What it is not:
+
 - It is NOT the probability of $H_0$ being true
+
 - It is NOT the probability that your result is due to chance
+
 - It is NOT the probability that $H_1$ is true
 
 A p-value of 0.03 means: if there really were no effect, you'd see a result this extreme (or more extreme) only 3% of the time by random chance. It says nothing directly about how likely it is that there is an effect — that would require Bayesian reasoning with a prior, which frequentist p-values don't provide.
