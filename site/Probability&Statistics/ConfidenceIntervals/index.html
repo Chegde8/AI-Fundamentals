@@ -9,28 +9,28 @@
       
       
       
-        <link rel="prev" href="../../EvaluationMetrics/">
+        <link rel="prev" href="../AB_and_Hypothesis_Testing/">
       
       
-        <link rel="next" href="../CrossEntropy/">
+        <link rel="next" href="../../TimeSeriesAnalysis/Q%26A/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Cosine Distance - Machine Learning Notes</title>
+        <title>Confidence Intervals - Machine Learning Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cosine-distance" class="md-skip">
+        <a href="#confidence-intervals" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Machine Learning Notes" class="md-header__button md-logo" aria-label="Machine Learning Notes" data-md-component="logo">
+    <a href="../.." title="Machine Learning Notes" class="md-header__button md-logo" aria-label="Machine Learning Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cosine Distance
+              Confidence Intervals
             
           </span>
         </div>
@@ -186,7 +186,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Machine Learning Notes" class="md-nav__button md-logo" aria-label="Machine Learning Notes" data-md-component="logo">
+    <a href="../.." title="Machine Learning Notes" class="md-nav__button md-logo" aria-label="Machine Learning Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -204,7 +204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -228,20 +228,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -262,7 +260,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -280,7 +278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../EvaluationMetrics/" class="md-nav__link">
+      <a href="../../MLConcepts/EvaluationMetrics/" class="md-nav__link">
         
   
   
@@ -305,20 +303,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -339,7 +335,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -354,20 +350,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
@@ -388,7 +382,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -403,19 +397,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../MLConcepts/LossFunctions/CosineDistance/" class="md-nav__link">
         
   
   
@@ -431,7 +416,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -499,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CrossEntropy/" class="md-nav__link">
+      <a href="../../MLConcepts/LossFunctions/CrossEntropy/" class="md-nav__link">
         
   
   
@@ -582,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../KL_divergence/" class="md-nav__link">
+      <a href="../../MLConcepts/LossFunctions/KL_divergence/" class="md-nav__link">
         
   
   
@@ -665,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MeanAbsoluteError/" class="md-nav__link">
+      <a href="../../MLConcepts/LossFunctions/MeanAbsoluteError/" class="md-nav__link">
         
   
   
@@ -748,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MeanSquaredError/" class="md-nav__link">
+      <a href="../../MLConcepts/LossFunctions/MeanSquaredError/" class="md-nav__link">
         
   
   
@@ -933,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ModelArchitectures/CNN/1D-CNN/" class="md-nav__link">
+      <a href="../../MLConcepts/ModelArchitectures/CNN/1D-CNN/" class="md-nav__link">
         
   
   
@@ -1071,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ModelArchitectures/Transformers/Informer/" class="md-nav__link">
+      <a href="../../MLConcepts/ModelArchitectures/Transformers/Informer/" class="md-nav__link">
         
   
   
@@ -1154,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ModelArchitectures/Transformers/TFT/" class="md-nav__link">
+      <a href="../../MLConcepts/ModelArchitectures/Transformers/TFT/" class="md-nav__link">
         
   
   
@@ -1210,18 +1194,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1242,7 +1228,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1260,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability%26Statistics/AB_and_Hypothesis_Testing/" class="md-nav__link">
+      <a href="../AB_and_Hypothesis_Testing/" class="md-nav__link">
         
   
   
@@ -1285,10 +1271,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Probability%26Statistics/ConfidenceIntervals/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confidence Intervals
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1304,6 +1317,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1417,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../TimeSeriesAnalysis/Q%26A/" class="md-nav__link">
+      <a href="../../TimeSeriesAnalysis/Q%26A/" class="md-nav__link">
         
   
   
@@ -1473,6 +1517,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1488,7 +1551,67 @@
 
 
 
-<h1 id="cosine-distance">Cosine Distance</h1>
+<h1 id="confidence-intervals">Confidence Intervals</h1>
+<p>A confidence interval (CI) gives you a range of plausible values for the true population parameter (e.g., the true difference in conversion rate between treatment and control), rather than just a single point estimate.</p>
+<p>A 95% confidence interval means: if you repeated this experiment many times, and computed a CI each time using the same method, 95% of those intervals would contain the true population parameter.</p>
+<p>It is NOT "there's a 95% probability the true value falls within this specific interval." Once the interval is computed from your one sample, the true value either is or isn't in it — there's no probability left, the randomness was in the sampling process, not the fixed true parameter.</p>
+<p>** How CI connects to hypothesis testing **: if a 95% CI for the difference between treatment and control does not include 0, that's equivalent to rejecting H₀ at α = 0.05 in a two-tailed test. many experienced practitioners prefer reporting CIs over just p-values, because a CI shows both whether there's likely an effect (does it exclude 0) and how big it might be (effect size / practical significance), all in one number range.</p>
+<h4 id="example">Example</h4>
+<p>An e-commerce company runs an A/B test on a checkout page redesign. Here's the data:</p>
+<ul>
+<li>
+<p>Control group: 10,000 users, 500 conversions --&gt; Conversion rate = 5%</p>
+</li>
+<li>
+<p>Treatment group: 10,000 users, 500 conversions --&gt; Conversion rate = 5.5%</p>
+</li>
+</ul>
+<p>We want a 95% confidence interval for the difference in conversion rates (treatment - control).</p>
+<p>Formula for a CI on a difference in proportions:
+$$ \hat{p_1} - \hat{p_2} \pm z^* x SE $$
+Where:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\hat{p_1}\)</span>, <span class="arithmatex">\(\hat{p_2}\)</span> are the two sample proportions</p>
+</li>
+<li>
+<p><span class="arithmatex">\(z^*\)</span> is the critical value for the confidence level (for 95%, <span class="arithmatex">\(z^* = 1.96\)</span>)</p>
+</li>
+<li>
+<p>$ SE = sqrt(\frac{\hat{p_1}(1-\hat{p_1})}{n_1} + \frac{\hat{p_2}(1-\hat{p_2})}{n_2}) $ is the standard error of the difference</p>
+</li>
+</ul>
+<p>In this example,</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\hat{p_treatment} = 0.055\)</span>, <span class="arithmatex">\(n_treatment = 10,000\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\hat{p_control} = 0.050\)</span>, <span class="arithmatex">\(n_control = 10,000\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(z^* = 1.96\)</span> for 95% confidence</p>
+</li>
+</ul>
+<p>Therefore,</p>
+<ul>
+<li>
+<p>The point estimate of the difference <span class="arithmatex">\(\hat{p_treatment} - \hat{p_control} = 0.005\)</span></p>
+</li>
+<li>
+<p>The standard error <span class="arithmatex">\(SE = 0.00315\)</span></p>
+</li>
+<li>
+<p>The margin of error <span class="arithmatex">\(z^* x SE = 0.006174\)</span></p>
+</li>
+<li>
+<p>The full margin of error <span class="arithmatex">\(= 0.005 \pm 0.006174 = (-0.001174, 0.011174) \approx (-0.12\%, 1.12\%)\)</span></p>
+</li>
+</ul>
+<p>Interpreting the above:
+The 95% CI for difference in conversion rate is approximately (-0.12\%, 1.12\%). <strong>This interval includes 0.</strong> Since 0 is a plausible value for the true difference (within our 95% confidence range), we cannot conclude there's a statistically significant difference between treatment and control at the 95% level, even though the observed point estimate (0.5 percentage points, a 10% relative lift) looks encouraging on the surface.</p>
+<p>The CI-excludes-zero rule is equivalent to <span class="arithmatex">\(p &lt; 0.05\)</span> in a two-tailed test. Since our interval straddles zero, if you ran the corresponding hypothesis test, you'd get <span class="arithmatex">\(p &gt; 0.05\)</span> and fail to reject <span class="arithmatex">\(H_0\)</span>.</p>
+<p>** Why this matters practically: ** This is actually a very common and important real-world result: you observed a lift, but you don't have enough evidence (or enough sample size) to confidently say it's real, rather than noise. A 0.5 percentage point difference from 5.0% to 5.5% is a plausible real effect, but with 10,000 users per group and roughly 500 events, there's still enough sampling variability that the true difference could plausibly be slightly negative, zero, or positive.</p>
 
 
 
@@ -1538,12 +1661,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
