@@ -53,3 +53,16 @@ The 95% CI for difference in conversion rate is approximately (-0.12\%, 1.12\%).
 The CI-excludes-zero rule is equivalent to $p < 0.05$ in a two-tailed test. Since our interval straddles zero, if you ran the corresponding hypothesis test, you'd get $p > 0.05$ and fail to reject $H_0$.
 
 **Why this matters practically:** This is actually a very common and important real-world result: you observed a lift, but you don't have enough evidence (or enough sample size) to confidently say it's real, rather than noise. A 0.5 percentage point difference from 5.0% to 5.5% is a plausible real effect, but with 10,000 users per group and roughly 500 events, there's still enough sampling variability that the true difference could plausibly be slightly negative, zero, or positive.
+
+NOTE: Higher confidence level (95% to 99%) implies we get a wider interval for same sample size. If you want to be more sure your interval captures the true value, you need to cast a wider net. There's a direct tradeoff between confidence and precision — you can't maximize both without more data. This is conceptually the same tradeoff as $\alpha$ and power in hypothesis testing (stricter significance threshold = fewer false positives, but less power).
+
+## How to get a more conclusive answer - connecting sample size determination
+This is where power analysis, done before the test, directly comes into play. The process:
+
+- **Decide the minimum effect size you care about detecting** — e.g., "we only care if conversion changes by at least 0.3 percentage points; smaller than that isn't worth acting on anyway."
+
+- **Decide desired power** — typically 80% (probability of detecting the effect if it's really there).
+
+- Decide $\alpha$ - typically 0.05
+
+- **Use the baseline conversion rate's variance**, plug into a sample size formula (or a calculator/software, this is rarely hand-derived in practice) to get the required $n$ per group.
