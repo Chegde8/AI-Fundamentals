@@ -1381,6 +1381,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#additional-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-tailed-vs-two-tailed-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-tailed vs two-tailed testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effect size
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-goes-wrong-without-a-precomputed-sample-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What goes wrong without a precomputed sample size
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-testing-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple testing problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-the-value-of-p-value-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does the value of p-value matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1638,6 +1710,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#additional-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-tailed-vs-two-tailed-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-tailed vs two-tailed testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effect size
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-goes-wrong-without-a-precomputed-sample-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What goes wrong without a precomputed sample size
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-testing-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple testing problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-the-value-of-p-value-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does the value of p-value matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1700,6 +1844,7 @@
 </li>
 </ul>
 <p>A p-value of 0.03 means: if there really were no effect, you'd see a result this extreme (or more extreme) only 3% of the time by random chance. It says nothing directly about how likely it is that there is an effect — that would require Bayesian reasoning with a prior, which frequentist p-values don't provide.</p>
+<p>Rejecting <span class="arithmatex">\(H_0\)</span> doesn't mean "<span class="arithmatex">\(H_0\)</span> is probably not true" in a strict probability sense. That phrasing edges toward the p-value misinterpretation trap. The more precise statement is: "if <span class="arithmatex">\(H_0\)</span> were true, results this extreme would be rare — rare enough that we've decided (via our <span class="arithmatex">\(\alpha\)</span> threshold) to act as if H₀ is false." It's a decision rule, not a direct probability statement about <span class="arithmatex">\(H_0\)</span> itself.</p>
 <h2 id="type-i-and-type-ii-errors">Type I and Type II Errors</h2>
 <table>
 <thead>
@@ -1737,7 +1882,18 @@
 <h2 id="designing-an-ab-test">Designing an AB Test</h2>
 <ol>
 <li>
-<p><strong>Define the metric</strong> - pick a single primary metric that reflects the business goal (e.g., conversion rate), not multiple metrics you'll cherry pick from later.</p>
+<p><strong>Define the metric</strong> - pick a single primary metric that reflects the business goal (e.g., conversion rate). In practice, multiple metrics are monitored: </p>
+<ul>
+<li>
+<p>One pre-registered primary metric — this is the one metric that determines whether the test "succeeded," and is decided before the test runs. This is what you use for the actual ship/no-ship decision.</p>
+</li>
+<li>
+<p>Secondary/guardrail metrics — tracked alongside, to catch unintended side effects (e.g., "did revenue increase but customer complaints also spike?" or "did conversion go up but average order value went down?"). These inform the decision but aren't the primary pass/fail bar.</p>
+</li>
+<li>
+<p>The reason to commit to one primary metric in advance is to prevent cherry-picking after the fact. If you test 10 metrics and don't pre-declare a primary one, you'll almost always find something that looks "significant" just by chance. Pre-registering the primary metric protects you from that trap, even while you're free to look at everything else for context and diagnosis.</p>
+</li>
+</ul>
 </li>
 <li>
 <p><strong>Define <span class="arithmatex">\(H_0\)</span> and <span class="arithmatex">\(H_1\)</span></strong> - usually <span class="arithmatex">\(H_0\)</span> is that there is no difference in metric between control and treatment.</p>
@@ -1795,6 +1951,72 @@
 </li>
 <li>
 <p>If <span class="arithmatex">\(p &lt; 0.05\)</span> and the lift is large enough to matter practically (e.g., not just 0.01% higher), ship it.</p>
+</li>
+</ul>
+<hr />
+<h2 id="additional-information">Additional Information</h2>
+<h4 id="one-tailed-vs-two-tailed-testing">One-tailed vs two-tailed testing</h4>
+<ul>
+<li>
+<p>Two-tailed test: <span class="arithmatex">\(H_1\)</span> is "there is a difference" (could be positive or negative). The p-value accounts for extremity in either direction. This is the default/safe choice, and what most A/B tests use, since you often can't rule out the treatment backfiring.</p>
+</li>
+<li>
+<p>One-tailed test: <span class="arithmatex">\(H_1\)</span> is directional — "the treatment increases the metric" (or specifically decreases it). The p-value only accounts for extremity in that one direction.</p>
+</li>
+</ul>
+<p>Practical implication: a one-tailed test has more statistical power to detect an effect in the direction you care about (for the same α), because all your "rejection region" is concentrated on one side of the distribution. But it comes with a real risk: if you use a one-tailed test expecting a positive effect, and the treatment actually makes things dramatically worse, your test won't flag that as "significant" in the way you'd want — because you specified the hypothesis to only look one direction.</p>
+<p>In practice, most rigorous A/B testing frameworks default to two-tailed tests, since you generally do want to catch negative surprises, not just confirm positive ones. Choosing a one-tailed test to gain power is sometimes viewed skeptically, since it can look like you're trying to make it easier to get a "significant" result in your preferred direction — worth being aware of as a potential ethical/rigor gray area.</p>
+<h4 id="effect-size">Effect size</h4>
+<p>Effect size measures the magnitude of a difference or relationship, independent of sample size or statistical significance. It answers "how big is the effect," as opposed to the p-value, which answers "how confident are we that an effect exists at all."</p>
+<p>Why this distinction matters: with a large enough sample size, even a tiny, practically meaningless difference can become statistically significant (<span class="arithmatex">\(p &lt; 0.05\)</span>), because p-values are heavily influenced by sample size. Effect size tells you whether that difference is actually big enough to matter for the business.</p>
+<p>Common effect size measures:</p>
+<ul>
+<li>
+<p>Cohen's d (for comparing two means): standardized difference between two group means, in units of standard deviation. Rules of thumb: 0.2 = small, 0.5 = medium, 0.8 = large.</p>
+</li>
+<li>
+<p>Absolute or relative lift (very common in A/B testing/business contexts): e.g., "conversion rate went from 5% to 5.3%" — an absolute lift of 0.3 percentage points, or a relative lift of 6%.</p>
+</li>
+<li>
+<p>Correlation coefficient (r) — itself a kind of effect size for relationships between variables.</p>
+</li>
+</ul>
+<h4 id="what-goes-wrong-without-a-precomputed-sample-size">What goes wrong without a precomputed sample size</h4>
+<ul>
+<li>
+<p>Underpowered test → false negatives. If your sample size is too small for the effect size you're hoping to detect, you might genuinely have a real effect happening, but your test lacks the statistical power to detect it reliably — you'd likely fail to reject H₀ and wrongly conclude "no effect," when really you just didn't collect enough data to see it clearly.</p>
+</li>
+<li>
+<p>"Peeking" problem → false positives. This is the sneakier one, and it's what happens when people run a test without a predetermined sample size/duration and instead check results continuously, stopping as soon as it "looks significant." Since p-values fluctuate over time as data accumulates, if you keep checking and stop the moment p &lt; 0.05, you dramatically inflate your true false-positive rate — even if each individual look seems legitimate. This is closely related to the multiple testing problem (repeated looks = repeated tests). The fix is to commit to a sample size/duration in advance (or use specialized "sequential testing" methods designed to allow valid peeking, which is a more advanced topic).</p>
+</li>
+</ul>
+<h4 id="multiple-testing-problem">Multiple testing problem</h4>
+<p>When you run many statistical tests simultaneously (or repeatedly), the probability that at least one of them shows a "significant" result purely by chance increases, even if there's no real effect anywhere.</p>
+<p>Concrete intuition: if <span class="arithmatex">\(\alpha = 0.05\)</span>, there's a 5% chance any single test gives a false positive. If you run 20 independent tests (e.g., testing 20 different metrics, or 20 different customer segments), the probability that at least one comes back "significant" purely by chance is:
+$$ 1 - ( 1- 0.05)**20 \approx 64\% $$
+That's a huge inflation from the intended 5% error rate, and it's why "we tested 20 metrics and found one with <span class="arithmatex">\(p=0.04\)</span>" is a red flag instead of being a win.</p>
+<p>Common corrections:</p>
+<ul>
+<li>
+<p>Bonferroni correction: divide <span class="arithmatex">\(\alpha\)</span> by the number of tests (e.g., <span class="arithmatex">\(\alpha/20 = 0.0025\)</span> per test) — simple but conservative (increases Type II error/false negatives).</p>
+</li>
+<li>
+<p>Benjamini-Hochberg (False Discovery Rate control): a less conservative alternative, more commonly used when running many tests (e.g., genomics, large-scale experimentation platforms) since Bonferroni becomes overly strict as the number of tests grows.</p>
+</li>
+</ul>
+<p>This is why preregistering one primary metric is important - it sidesteps the multiple testing problem entirely for the main ship decision, even while you still look at secondary metrics more cautiously/diagnostically.</p>
+<h4 id="does-the-value-of-p-value-matter">Does the value of p-value matter:</h4>
+<p>For the actual decision (ship / don't ship, reject / fail to reject <span class="arithmatex">\(H_0\)</span>), it's binary. You pick <span class="arithmatex">\(\alpha\)</span> in advance, and the decision rule is <span class="arithmatex">\(p &lt; \alpha\)</span> or not. Whether p = 0.049 or p = 0.001, both "reject <span class="arithmatex">\(H_0\)</span>" — the decision itself doesn't get "more true" as p gets smaller.</p>
+<p>But the magnitude of the p-value isn't entirely thrown away in practice, for a few reasons worth knowing:</p>
+<ul>
+<li>
+<p>Strength of evidence, informally: a p-value of 0.001 is often talked about informally as "stronger evidence against <span class="arithmatex">\(H_0\)</span>" than <span class="arithmatex">\(p = 0.049\)</span>, even though both cross the same threshold. This isn't a formal probability statement (it's still not "how likely <span class="arithmatex">\(H_0\)</span> is false"), but analysts do use it as a rough signal of how convincingly the data deviates from the null.</p>
+</li>
+<li>
+<p>Sensitivity to the threshold itself: a result at <span class="arithmatex">\(p = 0.049\)</span> vs. <span class="arithmatex">\(p = 0.051\)</span> straddles the <span class="arithmatex">\(α = 0.05\)</span> line, but the actual strength of evidence is nearly identical. Treating one as "significant" and the other as "not" is a somewhat arbitrary artifact of the threshold, not a meaningfully different outcome. Good analysts are aware of this and don't treat 0.05 as some sharp, magical line. A result just barely missing significance is often treated as "suggestive, worth another look," not "definitely nothing there."</p>
+</li>
+<li>
+<p>Multiple testing corrections directly use the magnitude — Bonferroni and similar corrections adjust the <span class="arithmatex">\(\alpha\)</span> threshold based on how many tests you're running, so the actual p-value magnitude matters for whether it clears the corrected bar, even if the underlying logic per test is still binary.</p>
 </li>
 </ul>
 
