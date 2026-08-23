@@ -1344,6 +1344,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-get-a-more-conclusive-answer-connecting-sample-size-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to get a more conclusive answer - connecting sample size determination
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1534,6 +1545,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-get-a-more-conclusive-answer-connecting-sample-size-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to get a more conclusive answer - connecting sample size determination
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1612,6 +1634,23 @@
 The 95% CI for difference in conversion rate is approximately (-0.12\%, 1.12\%). <strong>This interval includes 0.</strong> Since 0 is a plausible value for the true difference (within our 95% confidence range), we cannot conclude there's a statistically significant difference between treatment and control at the 95% level, even though the observed point estimate (0.5 percentage points, a 10% relative lift) looks encouraging on the surface.</p>
 <p>The CI-excludes-zero rule is equivalent to <span class="arithmatex">\(p &lt; 0.05\)</span> in a two-tailed test. Since our interval straddles zero, if you ran the corresponding hypothesis test, you'd get <span class="arithmatex">\(p &gt; 0.05\)</span> and fail to reject <span class="arithmatex">\(H_0\)</span>.</p>
 <p><strong>Why this matters practically:</strong> This is actually a very common and important real-world result: you observed a lift, but you don't have enough evidence (or enough sample size) to confidently say it's real, rather than noise. A 0.5 percentage point difference from 5.0% to 5.5% is a plausible real effect, but with 10,000 users per group and roughly 500 events, there's still enough sampling variability that the true difference could plausibly be slightly negative, zero, or positive.</p>
+<p>NOTE: Higher confidence level (95% to 99%) implies we get a wider interval for same sample size. If you want to be more sure your interval captures the true value, you need to cast a wider net. There's a direct tradeoff between confidence and precision — you can't maximize both without more data. This is conceptually the same tradeoff as <span class="arithmatex">\(\alpha\)</span> and power in hypothesis testing (stricter significance threshold = fewer false positives, but less power).</p>
+<h2 id="how-to-get-a-more-conclusive-answer-connecting-sample-size-determination">How to get a more conclusive answer - connecting sample size determination</h2>
+<p>This is where power analysis, done before the test, directly comes into play. The process:</p>
+<ul>
+<li>
+<p><strong>Decide the minimum effect size you care about detecting</strong> — e.g., "we only care if conversion changes by at least 0.3 percentage points; smaller than that isn't worth acting on anyway."</p>
+</li>
+<li>
+<p><strong>Decide desired power</strong> — typically 80% (probability of detecting the effect if it's really there).</p>
+</li>
+<li>
+<p>Decide <span class="arithmatex">\(\alpha\)</span> - typically 0.05</p>
+</li>
+<li>
+<p><strong>Use the baseline conversion rate's variance</strong>, plug into a sample size formula (or a calculator/software, this is rarely hand-derived in practice) to get the required <span class="arithmatex">\(n\)</span> per group.</p>
+</li>
+</ul>
 
 
 
