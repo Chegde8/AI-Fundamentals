@@ -106,7 +106,7 @@ Suppose a retail company wants to test whether adding "only 2 left in stock" urg
 
 ## Additional Information
 
-#### One-tailed vs two-tailed testing
+#### 1. One-tailed vs two-tailed testing
 
 - Two-tailed test: $H_1$ is "there is a difference" (could be positive or negative). The p-value accounts for extremity in either direction. This is the default/safe choice, and what most A/B tests use, since you often can't rule out the treatment backfiring.
 
@@ -116,7 +116,7 @@ Practical implication: a one-tailed test has more statistical power to detect an
 
 In practice, most rigorous A/B testing frameworks default to two-tailed tests, since you generally do want to catch negative surprises, not just confirm positive ones. Choosing a one-tailed test to gain power is sometimes viewed skeptically, since it can look like you're trying to make it easier to get a "significant" result in your preferred direction — worth being aware of as a potential ethical/rigor gray area.
 
-#### Effect size
+#### 2. Effect size
 Effect size measures the magnitude of a difference or relationship, independent of sample size or statistical significance. It answers "how big is the effect," as opposed to the p-value, which answers "how confident are we that an effect exists at all."
 
 Why this distinction matters: with a large enough sample size, even a tiny, practically meaningless difference can become statistically significant ($p < 0.05$), because p-values are heavily influenced by sample size. Effect size tells you whether that difference is actually big enough to matter for the business.
@@ -129,13 +129,13 @@ Common effect size measures:
 
 - Correlation coefficient (r) — itself a kind of effect size for relationships between variables.
 
-#### What goes wrong without a precomputed sample size
+#### 3. What goes wrong without a precomputed sample size
 
 - Underpowered test → false negatives. If your sample size is too small for the effect size you're hoping to detect, you might genuinely have a real effect happening, but your test lacks the statistical power to detect it reliably — you'd likely fail to reject H₀ and wrongly conclude "no effect," when really you just didn't collect enough data to see it clearly.
 
 - "Peeking" problem → false positives. This is the sneakier one, and it's what happens when people run a test without a predetermined sample size/duration and instead check results continuously, stopping as soon as it "looks significant." Since p-values fluctuate over time as data accumulates, if you keep checking and stop the moment p < 0.05, you dramatically inflate your true false-positive rate — even if each individual look seems legitimate. This is closely related to the multiple testing problem (repeated looks = repeated tests). The fix is to commit to a sample size/duration in advance (or use specialized "sequential testing" methods designed to allow valid peeking, which is a more advanced topic).
 
-#### Multiple testing problem
+#### 4. Multiple testing problem
 When you run many statistical tests simultaneously (or repeatedly), the probability that at least one of them shows a "significant" result purely by chance increases, even if there's no real effect anywhere.
 
 Concrete intuition: if $\alpha = 0.05$, there's a 5% chance any single test gives a false positive. If you run 20 independent tests (e.g., testing 20 different metrics, or 20 different customer segments), the probability that at least one comes back "significant" purely by chance is:
@@ -150,7 +150,7 @@ Common corrections:
 
 This is why preregistering one primary metric is important - it sidesteps the multiple testing problem entirely for the main ship decision, even while you still look at secondary metrics more cautiously/diagnostically.
 
-#### Does the value of p-value matter:
+#### 5. Does the value of p-value matter:
 For the actual decision (ship / don't ship, reject / fail to reject $H_0$), it's binary. You pick $\alpha$ in advance, and the decision rule is $p < \alpha$ or not. Whether p = 0.049 or p = 0.001, both "reject $H_0$" — the decision itself doesn't get "more true" as p gets smaller.
 
 But the magnitude of the p-value isn't entirely thrown away in practice, for a few reasons worth knowing:

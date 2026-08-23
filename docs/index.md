@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Introduction
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to my machine learning notes!
 
-## Commands
+This website contains notes related to a broad range concepts under the machine learning umbrella. It is definitely not exhaustive in terms of list of topics or depth, but is intended to help people already familiar with basic ML brush up on various concepts. I have also tried to include videos and animations wherever possible to help visualize concepts. I feel this is the easiest way to internalize a concept and easliy understand it. This website is constantly updated with more information.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+I hope you find these notes helpful!
