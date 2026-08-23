@@ -211,7 +211,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Introduction
   
 
     
@@ -1394,10 +1394,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#one-tailed-vs-two-tailed-testing" class="md-nav__link">
+  <a href="#1-one-tailed-vs-two-tailed-testing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        One-tailed vs two-tailed testing
+        1. One-tailed vs two-tailed testing
       
     </span>
   </a>
@@ -1405,10 +1405,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#effect-size" class="md-nav__link">
+  <a href="#2-effect-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Effect size
+        2. Effect size
       
     </span>
   </a>
@@ -1416,10 +1416,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#what-goes-wrong-without-a-precomputed-sample-size" class="md-nav__link">
+  <a href="#3-what-goes-wrong-without-a-precomputed-sample-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What goes wrong without a precomputed sample size
+        3. What goes wrong without a precomputed sample size
       
     </span>
   </a>
@@ -1427,10 +1427,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#multiple-testing-problem" class="md-nav__link">
+  <a href="#4-multiple-testing-problem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multiple testing problem
+        4. Multiple testing problem
       
     </span>
   </a>
@@ -1438,10 +1438,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#does-the-value-of-p-value-matter" class="md-nav__link">
+  <a href="#5-does-the-value-of-p-value-matter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Does the value of p-value matter:
+        5. Does the value of p-value matter:
       
     </span>
   </a>
@@ -1723,10 +1723,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#one-tailed-vs-two-tailed-testing" class="md-nav__link">
+  <a href="#1-one-tailed-vs-two-tailed-testing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        One-tailed vs two-tailed testing
+        1. One-tailed vs two-tailed testing
       
     </span>
   </a>
@@ -1734,10 +1734,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#effect-size" class="md-nav__link">
+  <a href="#2-effect-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Effect size
+        2. Effect size
       
     </span>
   </a>
@@ -1745,10 +1745,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#what-goes-wrong-without-a-precomputed-sample-size" class="md-nav__link">
+  <a href="#3-what-goes-wrong-without-a-precomputed-sample-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What goes wrong without a precomputed sample size
+        3. What goes wrong without a precomputed sample size
       
     </span>
   </a>
@@ -1756,10 +1756,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#multiple-testing-problem" class="md-nav__link">
+  <a href="#4-multiple-testing-problem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multiple testing problem
+        4. Multiple testing problem
       
     </span>
   </a>
@@ -1767,10 +1767,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#does-the-value-of-p-value-matter" class="md-nav__link">
+  <a href="#5-does-the-value-of-p-value-matter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Does the value of p-value matter:
+        5. Does the value of p-value matter:
       
     </span>
   </a>
@@ -1955,7 +1955,7 @@
 </ul>
 <hr />
 <h2 id="additional-information">Additional Information</h2>
-<h4 id="one-tailed-vs-two-tailed-testing">One-tailed vs two-tailed testing</h4>
+<h4 id="1-one-tailed-vs-two-tailed-testing">1. One-tailed vs two-tailed testing</h4>
 <ul>
 <li>
 <p>Two-tailed test: <span class="arithmatex">\(H_1\)</span> is "there is a difference" (could be positive or negative). The p-value accounts for extremity in either direction. This is the default/safe choice, and what most A/B tests use, since you often can't rule out the treatment backfiring.</p>
@@ -1966,7 +1966,7 @@
 </ul>
 <p>Practical implication: a one-tailed test has more statistical power to detect an effect in the direction you care about (for the same α), because all your "rejection region" is concentrated on one side of the distribution. But it comes with a real risk: if you use a one-tailed test expecting a positive effect, and the treatment actually makes things dramatically worse, your test won't flag that as "significant" in the way you'd want — because you specified the hypothesis to only look one direction.</p>
 <p>In practice, most rigorous A/B testing frameworks default to two-tailed tests, since you generally do want to catch negative surprises, not just confirm positive ones. Choosing a one-tailed test to gain power is sometimes viewed skeptically, since it can look like you're trying to make it easier to get a "significant" result in your preferred direction — worth being aware of as a potential ethical/rigor gray area.</p>
-<h4 id="effect-size">Effect size</h4>
+<h4 id="2-effect-size">2. Effect size</h4>
 <p>Effect size measures the magnitude of a difference or relationship, independent of sample size or statistical significance. It answers "how big is the effect," as opposed to the p-value, which answers "how confident are we that an effect exists at all."</p>
 <p>Why this distinction matters: with a large enough sample size, even a tiny, practically meaningless difference can become statistically significant (<span class="arithmatex">\(p &lt; 0.05\)</span>), because p-values are heavily influenced by sample size. Effect size tells you whether that difference is actually big enough to matter for the business.</p>
 <p>Common effect size measures:</p>
@@ -1981,7 +1981,7 @@
 <p>Correlation coefficient (r) — itself a kind of effect size for relationships between variables.</p>
 </li>
 </ul>
-<h4 id="what-goes-wrong-without-a-precomputed-sample-size">What goes wrong without a precomputed sample size</h4>
+<h4 id="3-what-goes-wrong-without-a-precomputed-sample-size">3. What goes wrong without a precomputed sample size</h4>
 <ul>
 <li>
 <p>Underpowered test → false negatives. If your sample size is too small for the effect size you're hoping to detect, you might genuinely have a real effect happening, but your test lacks the statistical power to detect it reliably — you'd likely fail to reject H₀ and wrongly conclude "no effect," when really you just didn't collect enough data to see it clearly.</p>
@@ -1990,7 +1990,7 @@
 <p>"Peeking" problem → false positives. This is the sneakier one, and it's what happens when people run a test without a predetermined sample size/duration and instead check results continuously, stopping as soon as it "looks significant." Since p-values fluctuate over time as data accumulates, if you keep checking and stop the moment p &lt; 0.05, you dramatically inflate your true false-positive rate — even if each individual look seems legitimate. This is closely related to the multiple testing problem (repeated looks = repeated tests). The fix is to commit to a sample size/duration in advance (or use specialized "sequential testing" methods designed to allow valid peeking, which is a more advanced topic).</p>
 </li>
 </ul>
-<h4 id="multiple-testing-problem">Multiple testing problem</h4>
+<h4 id="4-multiple-testing-problem">4. Multiple testing problem</h4>
 <p>When you run many statistical tests simultaneously (or repeatedly), the probability that at least one of them shows a "significant" result purely by chance increases, even if there's no real effect anywhere.</p>
 <p>Concrete intuition: if <span class="arithmatex">\(\alpha = 0.05\)</span>, there's a 5% chance any single test gives a false positive. If you run 20 independent tests (e.g., testing 20 different metrics, or 20 different customer segments), the probability that at least one comes back "significant" purely by chance is:
 $$ 1 - ( 1- 0.05)**20 \approx 64\% $$
@@ -2005,7 +2005,7 @@ That's a huge inflation from the intended 5% error rate, and it's why "we tested
 </li>
 </ul>
 <p>This is why preregistering one primary metric is important - it sidesteps the multiple testing problem entirely for the main ship decision, even while you still look at secondary metrics more cautiously/diagnostically.</p>
-<h4 id="does-the-value-of-p-value-matter">Does the value of p-value matter:</h4>
+<h4 id="5-does-the-value-of-p-value-matter">5. Does the value of p-value matter:</h4>
 <p>For the actual decision (ship / don't ship, reject / fail to reject <span class="arithmatex">\(H_0\)</span>), it's binary. You pick <span class="arithmatex">\(\alpha\)</span> in advance, and the decision rule is <span class="arithmatex">\(p &lt; \alpha\)</span> or not. Whether p = 0.049 or p = 0.001, both "reject <span class="arithmatex">\(H_0\)</span>" — the decision itself doesn't get "more true" as p gets smaller.</p>
 <p>But the magnitude of the p-value isn't entirely thrown away in practice, for a few reasons worth knowing:</p>
 <ul>
