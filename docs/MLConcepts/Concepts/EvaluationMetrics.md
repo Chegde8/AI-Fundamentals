@@ -43,8 +43,8 @@ The larger the area under the ROC curve, the better the model
 This is also a way to evaluate binary classification across all possible thresholds, like AUC.
 However, instead of the ROC curve, the area under the precision-recall curve is computed. 
 
-- X-axis: $ Recall (TPR) = \frac{TP}{TP + FN} $
-- Y-axis: $ Precision = \frac{TP}{TP + FP} $
+- X-axis: $Recall (TPR) = \frac{TP}{TP + FN}$
+- Y-axis: $Precision = \frac{TP}{TP + FP}$
 
 The key difference between ROC-AUC and PR-AUC is how they treat the negative class. 
 
