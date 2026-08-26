@@ -9,28 +9,28 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../BiasVarianceTradeoff/">
       
       
-        <link rel="next" href="../Concepts/BiasVarianceTradeoff/">
+        <link rel="next" href="../EvaluationMetrics/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Evaluation Metrics - Machine Learning Notes</title>
+        <title>Cross Validation - Machine Learning Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#evaluation-metrics" class="md-skip">
+        <a href="#cross-validation" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Machine Learning Notes" class="md-header__button md-logo" aria-label="Machine Learning Notes" data-md-component="logo">
+    <a href="../../.." title="Machine Learning Notes" class="md-header__button md-logo" aria-label="Machine Learning Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Evaluation Metrics
+              Cross Validation
             
           </span>
         </div>
@@ -186,7 +186,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Machine Learning Notes" class="md-nav__button md-logo" aria-label="Machine Learning Notes" data-md-component="logo">
+    <a href="../../.." title="Machine Learning Notes" class="md-nav__button md-logo" aria-label="Machine Learning Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -204,7 +204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -281,6 +281,83 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BiasVarianceTradeoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BiasVarianceTradeoff
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -296,7 +373,7 @@
   <span class="md-ellipsis">
     
   
-    Evaluation Metrics
+    Cross Validation
   
 
     
@@ -314,7 +391,7 @@
   <span class="md-ellipsis">
     
   
-    Evaluation Metrics
+    Cross Validation
   
 
     
@@ -340,22 +417,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#binary-classification-metrics" class="md-nav__link">
+  <a href="#why-this-matters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Binary classification metrics
+        Why this matters
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Binary classification metrics">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-cross-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of cross validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of cross validation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-accuracy" class="md-nav__link">
+  <a href="#1-k-fold-cross-validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Accuracy
+        1. K-fold cross validation
       
     </span>
   </a>
@@ -363,10 +451,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-precision" class="md-nav__link">
+  <a href="#2-stratified-k-fold" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Precision
+        2. Stratified k-fold
       
     </span>
   </a>
@@ -374,44 +462,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-recall" class="md-nav__link">
+  <a href="#3-time-aware-time-series-split" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Recall
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-f1-score" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. F1 Score
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-auc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. AUC
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. AUC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#roc-curve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ROC Curve
+        3. Time-aware (time series) split
       
     </span>
   </a>
@@ -420,55 +474,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-aucpr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. AUCPR
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multi-class-classification-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multi-class classification metrics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#regression-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Regression metrics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ranking-and-recommendation-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ranking and recommendation metrics
-      
-    </span>
-  </a>
   
 </li>
       
@@ -487,62 +492,15 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Concepts
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Concepts
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../Concepts/BiasVarianceTradeoff/" class="md-nav__link">
+      <a href="../EvaluationMetrics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    BiasVarianceTradeoff
+    Evaluation Metrics
   
 
     
@@ -563,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Concepts/Regularization/" class="md-nav__link">
+      <a href="../Regularization/" class="md-nav__link">
         
   
   
@@ -607,10 +565,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   
@@ -628,8 +586,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -654,10 +612,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
             
   
   
@@ -675,8 +633,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -693,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LossFunctions/CosineDistance/" class="md-nav__link">
+      <a href="../../LossFunctions/CosineDistance/" class="md-nav__link">
         
   
   
@@ -737,10 +695,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
             
   
   
@@ -758,8 +716,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -776,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LossFunctions/CrossEntropy/" class="md-nav__link">
+      <a href="../../LossFunctions/CrossEntropy/" class="md-nav__link">
         
   
   
@@ -820,10 +778,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
             
   
   
@@ -841,8 +799,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -859,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LossFunctions/KL_divergence/" class="md-nav__link">
+      <a href="../../LossFunctions/KL_divergence/" class="md-nav__link">
         
   
   
@@ -903,10 +861,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
             
   
   
@@ -924,8 +882,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -942,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LossFunctions/MeanAbsoluteError/" class="md-nav__link">
+      <a href="../../LossFunctions/MeanAbsoluteError/" class="md-nav__link">
         
   
   
@@ -986,10 +944,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2_5" id="__nav_2_2_5_label" tabindex="0">
             
   
   
@@ -1007,8 +965,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1025,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LossFunctions/MeanSquaredError/" class="md-nav__link">
+      <a href="../../LossFunctions/MeanSquaredError/" class="md-nav__link">
         
   
   
@@ -1077,10 +1035,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   
@@ -1098,8 +1056,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1116,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ML%26DL_Models/GradientBoosting/" class="md-nav__link">
+      <a href="../../ML%26DL_Models/GradientBoosting/" class="md-nav__link">
         
   
   
@@ -1160,10 +1118,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   
@@ -1181,8 +1139,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1207,10 +1165,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_1" id="__nav_2_5_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4_1" id="__nav_2_4_1_label" tabindex="0">
             
   
   
@@ -1228,8 +1186,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1254,10 +1212,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_1_1" id="__nav_2_5_1_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4_1_1" id="__nav_2_4_1_1_label" tabindex="0">
             
   
   
@@ -1275,8 +1233,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_1_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_1_1">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_1_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1293,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ModelArchitectures/CNN/1D-CNN/" class="md-nav__link">
+      <a href="../../ModelArchitectures/CNN/1D-CNN/" class="md-nav__link">
         
   
   
@@ -1345,10 +1303,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
             
   
   
@@ -1366,8 +1324,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1392,10 +1350,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_2_1" id="__nav_2_5_2_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4_2_1" id="__nav_2_4_2_1_label" tabindex="0">
             
   
   
@@ -1413,8 +1371,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_2_1">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1431,7 +1389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ModelArchitectures/Transformers/Informer/" class="md-nav__link">
+      <a href="../../ModelArchitectures/Transformers/Informer/" class="md-nav__link">
         
   
   
@@ -1475,10 +1433,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_2_2" id="__nav_2_5_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4_2_2" id="__nav_2_4_2_2_label" tabindex="0">
             
   
   
@@ -1496,8 +1454,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_2_2">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1514,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ModelArchitectures/Transformers/TFT/" class="md-nav__link">
+      <a href="../../ModelArchitectures/Transformers/TFT/" class="md-nav__link">
         
   
   
@@ -1620,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Probability%26Statistics/AB_and_Hypothesis_Testing/" class="md-nav__link">
+      <a href="../../../Probability%26Statistics/AB_and_Hypothesis_Testing/" class="md-nav__link">
         
   
   
@@ -1648,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Probability%26Statistics/ConfidenceIntervals/" class="md-nav__link">
+      <a href="../../../Probability%26Statistics/ConfidenceIntervals/" class="md-nav__link">
         
   
   
@@ -1777,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TimeSeriesAnalysis/Q%26A/" class="md-nav__link">
+      <a href="../../../TimeSeriesAnalysis/Q%26A/" class="md-nav__link">
         
   
   
@@ -1840,22 +1798,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#binary-classification-metrics" class="md-nav__link">
+  <a href="#why-this-matters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Binary classification metrics
+        Why this matters
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Binary classification metrics">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-cross-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of cross validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of cross validation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-accuracy" class="md-nav__link">
+  <a href="#1-k-fold-cross-validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Accuracy
+        1. K-fold cross validation
       
     </span>
   </a>
@@ -1863,10 +1832,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-precision" class="md-nav__link">
+  <a href="#2-stratified-k-fold" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Precision
+        2. Stratified k-fold
       
     </span>
   </a>
@@ -1874,44 +1843,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-recall" class="md-nav__link">
+  <a href="#3-time-aware-time-series-split" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Recall
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-f1-score" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. F1 Score
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-auc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. AUC
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. AUC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#roc-curve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ROC Curve
+        3. Time-aware (time series) split
       
     </span>
   </a>
@@ -1920,55 +1855,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-aucpr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. AUCPR
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multi-class-classification-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multi-class classification metrics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#regression-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Regression metrics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ranking-and-recommendation-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ranking and recommendation metrics
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1989,59 +1875,44 @@
 
 
 
-<h1 id="evaluation-metrics">Evaluation Metrics</h1>
-<p>This section goes through popular evaluation metrics used for different ML and DL tasks</p>
-<h2 id="binary-classification-metrics">Binary classification metrics</h2>
-<h3 id="1-accuracy">1. Accuracy</h3>
-<p>Accuracy measures the fraction of correctly predicted positive class samples out of all the samples in the test set.</p>
-<div class="arithmatex">\[ Accuracy = \frac{TP + TN}{TP + FP + TN + FN}\]</div>
-<p>Important considerations:
-\begin{itemize}
-\item Do not use accuracy for imbalanced datasets. The majority class will dominate the metric.
-\end{itemize}</p>
-<h3 id="2-precision">2. Precision</h3>
-<h3 id="3-recall">3. Recall</h3>
-<h3 id="4-f1-score">4. F1 Score</h3>
-<h3 id="5-auc">5. AUC</h3>
-<p>AUC (Area Under Curve) measures the area under the Receiver Operating Characteristics (ROC) curve. </p>
-<h4 id="roc-curve">ROC Curve</h4>
-<p>The ROC curve plots the FPR on x-axis and TPR on y-axis. </p>
-<ul>
-<li>X-axis: <span class="arithmatex">\(FPR = \frac{FP}{FP + TN}\)</span></li>
-<li>Y-axis: <span class="arithmatex">\(TPR (recall) = \frac{TP}{TP + FN}\)</span></li>
-</ul>
-<p>Generally, binary classifications output a probability score which indicates the probability of the sample being positive. To convert these probabilities into a binary score, we often use a threshold. A score above that threshold value is a 1 and anything below is a 0.
-The ROC curve plots the TPR and FPR for different thresholds. This helps in determining a good threshold value to use, as well as gives an overall idea of how the model performs regardless of what threshold is used thus making it easy to compare different models overall without relying on thesholds (this is what AUC also does). </p>
-<p>The animation below gives a visual description of how the ROC curve is created using a confusion matrix.</p>
-<video width="600" controls>
-  <source src="../../images/roc.mp4" type="video/mp4">
-</video>
-
-<p>The larger the area under the ROC curve, the better the model</p>
-<h3 id="6-aucpr">6. AUCPR</h3>
-<p>This is also a way to evaluate binary classification across all possible thresholds, like AUC.
-However, instead of the ROC curve, the area under the precision-recall curve is computed. </p>
-<ul>
-<li>X-axis: $ Recall (TPR) = \frac{TP}{TP + FN} $</li>
-<li>Y-axis: $ Precision = \frac{TP}{TP + FP} $</li>
-</ul>
-<p>The key difference between ROC-AUC and PR-AUC is how they treat the negative class. </p>
+<h1 id="cross-validation">Cross Validation</h1>
+<p>Cross-validation is a technique for estimating how well a model will generalize to unseen data. This is accomplished by systematically splitting the dataset into multiple train/validation combinations rather than relying on a single train/test split, which can give a misleadingly optimistic or pessimistic estimate depending on which examples happened to land in the test set.</p>
+<h3 id="why-this-matters">Why this matters</h3>
 <ul>
 <li>
-<p>ROC-AUC's FPR term is normalized by the the total number of negatives (FP + TN). If negatives vastly outnumber positives, like in fraud detection, TN is huge, so even a large raw number of false positives barely moves FPR. This makes ROC-AUC look deceptively good even when a model is actually generating tons of false positives in absolute terms.</p>
+<p>A single train/test split has two problems: the performance estimate depends heavily on the luck of that particular split, and you're only evaluating on a fraction of the data. </p>
 </li>
 <li>
-<p>PR-AUC's precision term is normalized by predicted positives (TP + FP). It never looks at TN. So it reflects "when I flag something as positive, how often am I right," which is what matters when false positives are costly or when you're operating in a highly imbalanced setting. Thus the PR-curve shows the balance between the precision-recall tradeoff which is generally what we care about in imbalanced datasets.</p>
+<p>Cross-validation addresses both:</p>
+</li>
+<li>
+<p>by rotating which subset acts as validation, <strong>every example eventually gets evaluated on</strong> rather than just a few which may be affected by outliers.</p>
+</li>
+<li>
+<p>You also get a <strong>distribution of scores</strong>, not just one number, which also lets you see <strong>how stable your model's performance is across different subsets</strong>: low variance across folds means a robust model, high variance is a red flag.</p>
 </li>
 </ul>
-<p>When to use which:
-- PR-AUC: when positive class is rare (i.e. class imbalance), or when you care about precision for your use case.</p>
+<h2 id="types-of-cross-validation">Types of cross validation</h2>
+<h3 id="1-k-fold-cross-validation">1. K-fold cross validation</h3>
+<p>This is the standard approach: split the dataset into k equal-sized folds. For each of the k iterations, train on k-1 folds and validate on the remaining one fold, then rotate which fold is held out. At the end, you average the k validation scores to get your overall performance estimate.</p>
 <ul>
-<li>ROC-AUC: when classes are roughly balanced, or when you care about both classes equally (since it gives you a symmetric view of separability). </li>
+<li>
+<p>Larger k: each fold is smaller, however this means means more training data per round and lower bias, but higher variance and more compute, since you're training k separate models.</p>
+</li>
+<li>
+<p>Smaller k: each fold is larger, therefore larger validation set per round. Faster and lower variance, but each model sees slightly less training data, so slightly higher bias.</p>
+</li>
+<li>
+<p>The extreme case: k = number of samples. This is called <strong>leave-one-out cross-validation (LOOCV)</strong>, rarely used in practice except on very small datasets, since it's expensive and can have high variance.</p>
+</li>
 </ul>
-<h2 id="multi-class-classification-metrics">Multi-class classification metrics</h2>
-<h2 id="regression-metrics">Regression metrics</h2>
-<h2 id="ranking-and-recommendation-metrics">Ranking and recommendation metrics</h2>
+<p>Note: the deeper explanation for why variance increases as k grows (toward LOOCV): this is not due to just "smaller validation sets are noisier per fold." It's that with larger k, the training sets across different folds become highly overlapping with each other, e.g., with LOOCV, each training set differs from the next by only one example. This means the k models you train are highly correlated with each other, and averaging highly correlated estimates doesn't reduce variance as much as averaging independent ones would. That's why LOOCV, despite using almost all the data for training each time and having low bias, tends to have higher variance in its overall CV estimate than something like 5 or 10-fold.</p>
+<h3 id="2-stratified-k-fold">2. Stratified k-fold</h3>
+<p>A variant of k-fold specifically for classification problems with <strong>class imbalance</strong>. Regular k-fold splits randomly, which means by chance one fold might end up with very few or even zero positive examples, especially with rare classes, giving you a wildly unreliable validation score for that fold.</p>
+<p>Stratified k-fold fixes this by ensuring <strong>each fold preserves the same class distribution as the overall dataset</strong>. So if the full dataset is 2% fraud, every fold will also be approximately 2% fraud, rather than some folds accidentally getting 0.5% and others 5%. This gives much more stable, trustworthy validation scores when working with imbalanced data.</p>
+<h3 id="3-time-aware-time-series-split">3. Time-aware (time series) split</h3>
+<p>Regular and stratified k-fold both assume examples are exchangeable, meaning shuffling them and randomly grouping them into folds is valid, order doesn't matter. But when there's a temporal structure, meaning future examples could leak information into predictions about the past, or more importantly, the model will only ever be deployed to predict the future in production, random folding creates look-ahead bias: you might train on data from March and validate on data from January, which the model would never realistically have access to in deployment.</p>
+<p>Time-aware splitting instead respects chronological order. The most common version is <strong>rolling-origin</strong> or <strong>expanding window</strong> validation: train on data up through time t, validate on the period right after, then expand the training window and repeat, always keeping validation data strictly after training data in time. Sometimes a <strong>fixed-size sliding window</strong> is used instead, where the training window doesn't grow but slides forward, useful when older data may be less relevant, like older fraud patterns your model shouldn't over-rely on since fraud tactics evolve.</p>
 
 
 
@@ -2091,12 +1962,12 @@ However, instead of the ROC curve, the area under the precision-recall curve is 
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
