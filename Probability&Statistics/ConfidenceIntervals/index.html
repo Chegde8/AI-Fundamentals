@@ -1839,10 +1839,22 @@ The 95% CI for difference in conversion rate is approximately (-0.12\%, 1.12\%).
 <p><strong>Decide desired power</strong> — typically 80% (probability of detecting the effect if it's really there).</p>
 </li>
 <li>
-<p>Decide <span class="arithmatex">\(\alpha\)</span> - typically 0.05</p>
+<p><strong>Decide <span class="arithmatex">\(\alpha\)</span></strong> - typically 0.05</p>
 </li>
 <li>
 <p><strong>Use the baseline conversion rate's variance</strong>, plug into a sample size formula (or a calculator/software, this is rarely hand-derived in practice) to get the required <span class="arithmatex">\(n\)</span> per group.</p>
+</li>
+</ul>
+<p>Intuitively,</p>
+<ul>
+<li>
+<p>Smaller effect size you want to detect → much larger sample size needed (effect size is squared in the denominator — this is the most sensitive term)</p>
+</li>
+<li>
+<p>Higher desired power → larger sample size needed</p>
+</li>
+<li>
+<p>Stricter <span class="arithmatex">\(\alpha\)</span> → larger sample size needed</p>
 </li>
 </ul>
 
