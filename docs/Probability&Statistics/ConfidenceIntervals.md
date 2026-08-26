@@ -63,6 +63,14 @@ This is where power analysis, done before the test, directly comes into play. Th
 
 - **Decide desired power** — typically 80% (probability of detecting the effect if it's really there).
 
-- Decide $\alpha$ - typically 0.05
+- **Decide $\alpha$** - typically 0.05
 
 - **Use the baseline conversion rate's variance**, plug into a sample size formula (or a calculator/software, this is rarely hand-derived in practice) to get the required $n$ per group.
+
+Intuitively,
+
+- Smaller effect size you want to detect → much larger sample size needed (effect size is squared in the denominator — this is the most sensitive term)
+
+- Higher desired power → larger sample size needed
+
+- Stricter $\alpha$ → larger sample size needed
