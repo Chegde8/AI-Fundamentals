@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../LossFunctions/MeanSquaredError/">
+        <link rel="prev" href="../GradientBoosting/">
       
       
-        <link rel="next" href="../LogisticRegression/">
+        <link rel="next" href="../../ModelArchitectures/CNN/1D-CNN/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>GradientBoosting - Machine Learning Notes</title>
+        <title>Logistic Regression - Machine Learning Notes</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#logistic-regression" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GradientBoosting
+              Logistic Regression
             
           </span>
         </div>
@@ -958,17 +963,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../GradientBoosting/" class="md-nav__link">
         
   
   
@@ -984,7 +982,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -994,10 +991,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../LogisticRegression/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logistic Regression
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1013,6 +1037,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core idea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-is-trained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it is trained
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpretability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions and limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-class-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-class extension
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1711,6 +1821,82 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core idea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-is-trained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it is trained
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpretability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions and limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-class-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-class extension
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1727,9 +1913,51 @@
 
 
 
-  <h1>GradientBoosting</h1>
-
-
+<h1 id="logistic-regression">Logistic Regression</h1>
+<p>Logistic regression is a classification algorithm, most commonly used for binary classification, that models the probability of an outcome belonging to a particular class, rather than predicting the class label directly. Despite the name containing "regression," it's fundamentally a classifier, the name comes from the fact that it's built on top of a linear regression-like structure before being transformed into a probability.</p>
+<h2 id="core-idea">Core idea</h2>
+<p>You start with a linear combination of your features, exactly like linear regression, this is often called the log-odds or logit:</p>
+<div class="arithmatex">\[z = {\beta}_0 + {\beta}_1x_1 + {\beta}_2x_2 + ... + {\beta}_nx_n\]</div>
+<p>This <span class="arithmatex">\(z\)</span> can range from negative infinity to positive infinity, which isn't a valid probability. So logistic regression passes z through the sigmoid function to squash it into the range zero to one:</p>
+<div class="arithmatex">\[p = \frac{1}{(1 + e^(-z))}\]</div>
+<p>This <span class="arithmatex">\(p\)</span> is interpreted as the predicted probability of the positive class. To get a hard classification, you apply a threshold, commonly 0.5, if <span class="arithmatex">\(p\)</span> is above the threshold, predict class 1, otherwise class 0. Importantly, that threshold is tunable, not fixed.</p>
+<p><strong>Why sigmoid specifically</strong>: The sigmoid function has a nice property, its inverse, the logit function, is exactly the log of the odds, meaning <span class="arithmatex">\(log(\frac{p}{1-p}) = z\)</span>, the original linear combination. So logistic regression can be thought of as linear regression on the log-odds scale.</p>
+<h2 id="how-it-is-trained">How it is trained</h2>
+<p>Since the output is a probability, not a continuous unbounded value, logistic regression is trained using log loss, also called binary cross-entropy. Log loss heavily penalizes confident wrong predictions, predicting 0.99 probability for something that turns out to be class 0 incurs a huge penalty, this is what makes it well-suited to probability estimation rather than just classification accuracy.</p>
+<h2 id="interpretability">Interpretability</h2>
+<p>This is logistic regression's biggest advantage over more complex models. Each coefficient <span class="arithmatex">\(\beta_i\)</span> has a direct, clean interpretation: a one-unit increase in feature xᵢ multiplies the odds of the positive class by <span class="arithmatex">\(e^(\beta_i)\)</span>, holding all other features constant. This is called the odds ratio. So if a coefficient for "company age in years" is 0.1, the odds ratio is e^0.1, roughly 1.105, meaning each additional year of company age is associated with about a 10.5% increase in the odds of being low-risk, holding everything else constant.</p>
+<h2 id="assumptions-and-limitations">Assumptions and limitations</h2>
+<ul>
+<li>
+<p>Assumes a linear relationship between features and the log-odds, not the raw probability, this is a common point of confusion, the probability-feature relationship is actually S-shaped, non-linear, but log-odds versus features is linear.</p>
+</li>
+<li>
+<p>Assumes no severe multicollinearity between features, correlated features destabilize coefficient estimates and interpretation.</p>
+</li>
+<li>
+<p>Struggles to capture feature interactions or non-linear patterns unless you manually engineer interaction terms or polynomial features, this is the main practical reason tree ensembles usually outperform it on complex tabular data, they capture interactions automatically via splits.</p>
+</li>
+<li>
+<p>Sensitive to outliers to some degree, though less so than linear regression, since the sigmoid compresses extreme values.</p>
+</li>
+</ul>
+<h2 id="when-to-use-it">When to use it</h2>
+<ul>
+<li>
+<p>When interpretability or regulatory explainability is a hard requirement.</p>
+</li>
+<li>
+<p>As a fast, lightweight baseline before trying more complex models, very standard practice.</p>
+</li>
+<li>
+<p>When you have a reasonably large dataset relative to feature count, and suspect roughly linear separability in log-odds space.</p>
+</li>
+<li>
+<p>When you need well-calibrated probabilities, logistic regression tends to produce more naturally calibrated probability outputs than tree ensembles, which often need explicit calibration, like Platt scaling or isotonic regression, to produce trustworthy probabilities. </p>
+</li>
+</ul>
+<h2 id="multi-class-extension">Multi-class extension</h2>
+<p>Multinomial logistic regression, also called softmax regression, generalizes this to more than two classes, using the softmax function instead of sigmoid, this is the same idea underlying the final layer of most neural network classifiers.</p>
 
 
 
